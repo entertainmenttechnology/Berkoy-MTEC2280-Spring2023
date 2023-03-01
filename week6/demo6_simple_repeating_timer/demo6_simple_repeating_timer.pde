@@ -20,7 +20,11 @@ void draw() {
 
   //if 2 seconds have passed since last saved time, execute code block
   if (currentTime-savedTime > timer) { 
-    ellipseX+=20; //increment ellipseX value by 20
+    if (ellipseX> width) {
+      ellipseX=0;
+    } else {
+      ellipseX+=20; //increment ellipseX value by 20
+    }
     fill(random(255), random(255), random(255)); //change fill to random color
     savedTime=currentTime; //assign value of currentTime to savedTime
   }
