@@ -23,5 +23,8 @@ void loop() {
   reading = analogRead(potPin);     // reads pot 0 to 1023            
   analogWrite (LED, reading/4);  // reduces value to match PWM output range 0-255
 
-  //Serial.println (reading/4);  // prints to Serial monitor
+//comment and uncomment ONE of these below
+  Serial.println (reading/4);  // prints to Serial monitor
+  //Serial.write(reading/4); //sends binary data to Serial port
+
 }
